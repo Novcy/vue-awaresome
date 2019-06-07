@@ -31,7 +31,7 @@
   },
   "lint-staged": {
     "src/(*.vue|*.js)": [
-      "prittier --write",
+      "prettier --write",
       "git add"
     ]
   }
