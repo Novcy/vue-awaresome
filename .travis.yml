@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 8
+
+before_deploy: npm run build
+deploy:
+  provider: npm
+  email: kazekage605@gmail.com
+  skip_cleanup: true
+  api_key: npm_token 
+  on:
+    tags: true
+    branch: master
+  tag: latest

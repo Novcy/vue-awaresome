@@ -1,0 +1,98 @@
+{
+  "name": "el-select-search",
+  "version": "0.0.1",
+  "description": "A select search component of Vue",
+  "main": "dist/el-select-search.umd.js",
+  "module": "dist/el-select-search.esm.js",
+  "unpkg": "dist/el-select-search.min.js",
+  "browser": {
+    "./sfc": "src/el-select-search.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jealxy/el-select-search.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "select",
+    "search",
+    "vue"
+  ],
+  "scripts": {
+    "start": "start-storybook",
+    "build": "npm run build:unpkg && npm run build:es && npm run build:umd",
+    "build:unpkg": "rollup -c build/rollup.config.js -f iife -o dist/el-select-search.min.js",
+    "build:es": "rollup -c build/rollup.config.js -f es -o dist/el-select-search.esm.js",
+    "build:umd": "rollup -c build/rollup.config.js -f umd -o dist/el-select-search.umd.js",
+    "test": "jest"
+  },
+  "author": "cuzvin",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@storybook/vue": "^5.1.10",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-vue": "^2.0.2",
+    "css-loader": "^3.1.0",
+    "element-ui": "^2.11.1",
+    "husky": "^3.0.3",
+    "jest": "^24.8.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.2.1",
+    "minimist": "^1.2.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-uglify-es": "^0.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "style-loader": "^0.23.1",
+    "vue": "^2.6.10",
+    "vue-jest": "^3.0.4",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.vue": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!src/index.js",
+      "!**/node_modules/**"
+    ]
+  }
+}
