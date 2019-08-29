@@ -7,8 +7,8 @@
 
 ## usage
 ```
-yarn add el-select-search or
-npm install el-select-search
+yarn add @cuzvin/select or
+npm install @cuzvin/select
 ```
 
 ```Vue
