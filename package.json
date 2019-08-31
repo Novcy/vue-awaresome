@@ -1,5 +1,5 @@
 {
-  "name": "@cuzvin/select",
+  "name": "el-select-cuzvin",
   "version": "0.0.1",
   "description": "A select search component of Vue",
   "main": "dist/el-select-search.umd.js",
