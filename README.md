@@ -7,8 +7,8 @@
 
 ## usage
 ```
-yarn add @cuzvin/select or
-npm install @cuzvin/select
+yarn add el-select-cuzvin or
+npm install el-select-cuzvin
 ```
 
 ```Vue
